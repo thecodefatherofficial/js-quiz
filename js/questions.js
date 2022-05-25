@@ -41,7 +41,7 @@ let questions = [
       "name myFunction()",
       "myFunction()",
       "name function myFunction()",
-      "չգիդեմ"
+      "Չգիտեմ"
     ]
   },
     {
@@ -102,12 +102,12 @@ let questions = [
   {
   numb: 10,
   question: "Ինչպե՞ս եք հայտարարում JavaScript փոփոխականը:",
-  answer: "title",
+  answer: "var carName;",
   options: [
     "var carName;",
     "v carName;",
     "variable carName;",
-    "չգիդեմ"
+    "Չգիտեմ"
   ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
