@@ -223,6 +223,7 @@ function sendmail() {
     let TreeVariant = document.getElementById("tree-variant").value;
     let FourVariant = document.getElementById("four-variant").value;
     let QuestionEmail = document.getElementById("question-email").value;
+    let RightAn = document.getElementById("right-an").value;
 
         var contactParams = {
             form_question: Question,
@@ -231,6 +232,7 @@ function sendmail() {
             variant_tree: TreeVariant,
             variant_four: FourVariant,
             question_sender: QuestionEmail,
+            right_an: RightAn
         };
 
         emailjs.send('service_srulwsk', 'template_k2ssg1c', contactParams).then(function (res) {

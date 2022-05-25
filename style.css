@@ -204,7 +204,9 @@ body{
     border-radius: 20px;
     padding: 10px;
     width: 100%;
+    height: 40px;
     outline-color: #ff7300;
+    box-sizing: border-box;
 }
 .add-question ul{
     padding-left: 15px;
@@ -290,6 +292,19 @@ body{
     width: 25px;
     margin-right: 5px;
     margin-top: 5px;
+}
+
+.add-question .right{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.add-question .right input{
+    text-align: center;
+}
+.add-question .right label{
+    white-space: nowrap;
+    margin-right: 10px;
 }
 .start_btn,
 .info_box,
