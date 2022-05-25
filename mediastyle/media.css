@@ -1,0 +1,46 @@
+@media screen and (max-width: 566px) {
+  .info_box {
+    width: 95%;
+  }
+  .info_box .info-title {
+    font-size: 17px;
+  }
+  .info_box .info-list .info {
+    font-size: 13px;
+  }
+  .quiz_box {
+    width: 95%;
+  }
+  .quiz_box header .title {
+    font-size: 17px;
+  }
+  .quiz_box header .timer .time_left_txt {
+    font-size: 15px;
+  }
+  .quiz_box header .timer .timer_sec {
+    font-size: 16px;
+  }
+  section .que_text {
+    font-size: 14px;
+  }
+  section .option_list .option {
+    font-size: 15px;
+  }
+  .result_box {
+    width: 95%;
+  }
+  .result_box .complete_text {
+    font-size: 15px;
+  }
+  .result_box .score_text span {
+    font-size: 15px;
+  }
+  .result_box .buttons button {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+  .add-question {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Quiz | The CodeFather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediastyle/media.css">
+    <link rel="icon" href="img/TCFLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<div class="body">
+
+  <div class="back"></div>
+
+    <div class="add-quetion-icon">
+        <img src="img/add-question.svg" alt="">
+        <p>Ավելացնել Հարց</p>
+    </div>
+
+    <div class="home-and-change-game-buttons">
+
+        <a href="https://thecodefatherofficial.github.io/main/" class="home-button">
+            <img src="img/home.svg" alt="">
+            <p>Գլխավոր Էջ</p>
+        </a>
+    
+        <div class="change-game">
+            <div class="change-game_icon">
+                <img class="icon" src="img/change-game.svg" alt="">
+                <p>Այլ Խաղեր</p>
+            </div>
+            <div class="change-game_games">
+
+                <a href="https://gormkrtchyann.github.io/thecodefather2.0/games/quiz/Html%20Quiz/index.html" target="_blank" class="change-game_games_item">
+                    <img src="img/htmlquiz.png" alt="">
+                    <p>HTML Quiz</p>
+                </a>
+    
+                <a href="https://gormkrtchyann.github.io/thecodefather2.0/games/quiz/Js%20Quiz/index.html" target="_blank" class="change-game_games_item">
+                    <img src="img/cssquiz.png" alt="">
+                    <p>CSS Quiz</p>
+                </a>
+    
+                <a href="https://gormkrtchyann.github.io/thecodefather2.0/games/quiz/Bootstrap%20Quiz/index.html" target="_blank" class="change-game_games_item">
+                    <img src="img/bootstrapquiz.png" alt="">
+                    <p>Bootstrap Quiz</p>
+                </a>
+    
+                <a href="https://gormkrtchyann.github.io/thecodefather2.0/games/flexboxdevelopers/index.html" target="_blank" class="change-game_games_item">
+                    <img src="img/game01.png" alt="">
+                    <p>FlexBox Developers</p>
+                </a>
+    
+                <a href="https://gormkrtchyann.github.io/js-game/" target="_blank" class="change-game_games_item">
+                    <img src="img/logo-center.png" alt="">
+                    <p>JavaScript Memory</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-question-alert">
+        <img class="add-question-aler-close" src="img/close.svg" alt=""> 
+        <p>Շնորհակալություն․ Ձեր հարցը ուղարկված է, քնարկվելուց հետո հնարավոր է ավելացվի խաղում իսկ 
+            տեղեկանալու մասին մուտքագրեք ձեր էլ․ հասցեն ներքևում։ <span>!Եթե չանեք այս քայլը ձեր հարցը չի դրվի քնարկման!</span>
+        </p>
+        <div class="add-question-alert_input">
+            <input type="email" name="" id="question-email" placeholder="example@example.com">
+            <button onclick="sendmail()"><img src="img/send.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="add-question">
+        <img class="add-question-close" src="img/close.svg" alt=""> 
+        <h2>Հարցի Ավելացում</h2>
+        <p>Ցանկալի է հարցը և տարբերակները լինեն հակիրճ</p>
+        <form action="">
+            <label for="question">Հարցը</label>
+            <input type="text" name="" id="question">
+
+            <h4>Տարբերակները</h4>
+
+            <ul>
+                <li>
+                    <input type="text" name="" id="one-variant">
+                </li>
+                <li>
+                    <input type="text" name="" id="two-variant">
+                </li>
+                <li>
+                    <input type="text" name="" id="tree-variant">
+                </li>
+                <li>
+                    <input type="text" name="" id="four-variant">
+                </li>
+            </ul>
+
+            <input type="button" onclick="sendQuestion()" value="Ուղարկել">
+        </form>
+    </div>
+
+    <button class="start_btn">Սկսել Quiz-ը</button> 
+
+    <div class="info_box">
+        <div class="info-title"><span>Quiz-ի կանոնները</span></div>
+        <div class="info-list">
+            <div class="info">1. Յուրաքանչյուր հարցի համար դուք կունենաք ընդամենը <span>15 վայրկյան</span>:</div>
+            <div class="info">2. Երբ ընտրեք ձեր պատասխանը, այն հնարավոր չէ հետարկել:</div>
+            <div class="info">3. Դուք չեք կարող ընտրել որևէ տարբերակ, երբ ժամանակը դադարում է:</div>
+            <div class="info">4. Դուք չեք կարող դուրս գալ Quiz-ից, երբ խաղում եք:</div>
+            <div class="info">5. Դուք միավորներ կստանաք ձեր ճիշտ պատասխանների հիման վրա:</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Դուրս գալ</button>
+            <button class="restart">Շարունակել</button>
+        </div>
+    </div>
+
+    <div class="quiz_box">
+        <header>
+            <div class="title">JS Quiz</div>
+            <div class="timer">
+                <div class="time_left_txt">Ժամանակ</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+
+        <footer>
+            <div class="total_que">
+            </div>
+            <button class="next_btn">Հաջորդը</button>
+        </footer>
+    </div>
+
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Դուք ավարտեցիք Quiz-ը!</div>
+        <div class="score_text">
+        </div>
+        <div class="buttons">
+            <button class="restart">Կրկնել Quiz-ը</button>
+            <button class="quit">Դուրս գալ</button>
+        </div>
+    </div>
+
+    <script src="js/questions.js"></script>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("Qz07KcIqlZNoyNuGl");
+        })();
+    </script>
+</div>
+</body>
+</html>
